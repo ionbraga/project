@@ -1,22 +1,33 @@
-//cicluri in cicluri
-for (let i = 0; i < 3; i++) {
-    console.log(i);
-    for (let j = 0; j < 3; j++) {
-        console.log(j);   
-    }
+const numberOfFilms = prompt('Cate filme ati privit deja?', '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
 
-// facem o piramida
+for (let i = 0; i < 2; i++) {
+    const a = prompt("Unul dintre filmele privite anterior?", ""),
+          b = prompt("Ce nota ia-ti da?", "");
 
-let result = '';
-const lenght = 7;
-
-for (let i = 1; i < lenght; i++) {
-
-    for (let j = 0; j < i; j++) {
-        result += "*";
+    if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
     }
-    result += '\n';
 }
 
-console.log(result);
+if (personalMovieDB.count < 10) {
+    console.log("Prea putine filme");
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log("Sunteti utilizator clasic");
+} else if (personalMovieDB.count >= 30) {
+    console.log("sunteti chinoman");
+} else {
+    console.log("Error")
+}
+
+console.log(personalMovieDB);
