@@ -1,33 +1,51 @@
-const numberOfFilms = prompt('Cate filme ati privit deja?', '');
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
+//function declaration
+
+function showFirstMessage() {
+    console.log("Hello World");
+}
+
+showFirstMessage();
+
+
+let num = 20;
+
+function showFirstMessage(test) {
+    console.log(test);
+    let num = 10;
+}
+
+showFirstMessage("Hello World");
+console.log(num);
+
+
+function calc(a, b) {
+    return (a + b);
+}
+
+console.log(calc(4, 3));
+console.log(calc(5, 6));
+console.log(calc(3, 7));
+
+function ret () {
+    let num = 50;
+    //
+    return num;
+}
+const anotherNum = ret();
+console.log(anotherNum);
+
+//function expression
+const logger = function() {
+    console.log("hello");
 };
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt("Unul dintre filmele privite anterior?", ""),
-          b = prompt("Ce nota ia-ti da?", "");
+logger();
 
-    if (a != null && b != null && a != "" && b != "" && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log('done');
-    } else {
-        console.log('error');
-        i--;
-    }
-}
+//strelocinae functii
 
-if (personalMovieDB.count < 10) {
-    console.log("Prea putine filme");
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-    console.log("Sunteti utilizator clasic");
-} else if (personalMovieDB.count >= 30) {
-    console.log("sunteti chinoman");
-} else {
-    console.log("Error")
-}
+const calc = (a, b) => a + b;
 
-console.log(personalMovieDB);
+const calc = (a, b) => {
+    console.log('1');
+    return a + b;
+};
