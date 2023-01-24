@@ -1,52 +1,39 @@
-// const numberOfFilms = +prompt('Cate filme ati privit deja?', '');
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     privat: false
-// };
 
-// const a = prompt("Unul dintre filmele privite anterior?", ""),
-//       b = prompt("Ce nota ia-ti da?", ""),
-//       c = prompt("Unul dintre filmele privite anterior?", ""),
-//       d = prompt("Ce nota ia-ti da?", "");
+//primul tip de ciclu, se foloseste while
+let num = 50;
+while (num <= 55) {
+    console.log(num);
+    num++;
+}
 
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
 
-// console.log(personalMovieDB);
+//al doilea tip de ciclu, diferenta fata de primu este ca aici se pune in fata sarcina de realizat apoi vine while
 
-// if (4 == 9) {
-//     console.log("Ok!");
-// } else {
-//     console.log("Error")
-// }
+let nun = 50;
+do {
+    console.log(nun);
+    nun++;
+}
+while (nun <= 55);
 
-// const num = 50;
 
-// if (num < 49) {
-//     console.log('Error');
-// } else if (num > 100) {
-//     console.log('Mult');
-// } else {
-//     console.log("ok")
-// }
+//al treilea tip de ciclu, for
+let sas = 50;
+for (let i = 1;i < 8; i++) {
+    console.log(sas);
+    sas++;
+}
 
-// (num === 50) ? console.log("ok") : console.log("error");
+for (let i = 1; i < 10; i++) {
+    if (i === 6) {
+        break; //se opreste la 6
+    }
+    console.log(i);
+}
 
-const num = 54;
-switch (num) {
-    case 49: 
-        console.log('nui drept');
-        break;
-    case 100:
-        console.log('nui drept');
-        break;
-    case 50:
-        console.log('drept');
-        break;
-    default:
-        console.log('nu de data asta');
-        break;
+for (let i = 1; i < 10; i++) {
+    if (i === 6) {
+        continue; // il trece pe 6 cu vederea
+    }
+    console.log(i);
 }
