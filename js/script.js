@@ -1,32 +1,67 @@
 "use strict"
 
-const str = "Test";
-const arr = [1, 2, 3];
-// console.log(arr.length);
-// console.log(str[2]);
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
-console.log(str);
+let numberOfFilms;
+
+function start () {
+    numberOfFilms = +prompt('Cate filme ati privit deja?', '');
+
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('Cate filme ati privit deja?', '');
+    }
+}
+
+start();
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
 
+function rememberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+        const a = prompt("Unul dintre filmele privite anterior?", ""),
+              b = prompt("Ce nota ia-ti da?", "");
+        if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+                personalMovieDB.movies[a] = b;
+                console.log('done');
+        } else {
+                console.log('error');
+                i--;
+        }
+    }
+}
+rememberMyFilms();
 
-const fruit = "Some fruit";
-console.log(fruit.indexOf("fruit"));
-console.log(fruit.indexOf("q"));
+function detectPersonalLevel () {
+    if (personalMovieDB.count < 10) {
+        console.log("Prea putine filme");
+    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+        console.log("Sunteti utilizator clasic");
+    } else if (personalMovieDB.count >= 30) {
+        console.log("sunteti chinoman");
+    } else {
+        console.log("Error")
+    }
+}
+detectPersonalLevel();
 
+function showMyDB (hidden) {
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
 
-const logg = "Hello world";
-console.log(logg.slice(6, 11));
-console.log(logg.slice(6));
-console.log(logg.slice(-5, -1));
-console.log(logg.substring(4, 11));
-console.log(logg.substr(6,5));
+showMyDB(personalMovieDB.privat);
 
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        personalMovieDB.genres[i - 1] =  prompt(`Genul dumneavoastra preferat este sub nr. ${i}`);;
+    }
+}
 
+writeYourGenres();
 
-const num = 12.2;
-console.log(Math.round(num));
-
-const test = "12.2px";
-console.log(parseInt(test));
-console.log(parseFloat(test));
