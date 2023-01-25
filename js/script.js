@@ -1,62 +1,32 @@
-//function declaration
+"use strict"
 
-function showFirstMessage() {
-    console.log("Hello World");
-}
-
-showFirstMessage();
-
-
-let num = 20;
-
-function showFirstMessage(test) {
-    console.log(test);
-    let num = 10;
-}
-
-showFirstMessage("Hello World");
-console.log(num);
-
-
-function calc(a, b) {
-    return (a + b);
-}
-
-console.log(calc(4, 3));
-console.log(calc(5, 6));
-console.log(calc(3, 7));
-
-function ret () {
-    let num = 50;
-    //
-    return num;
-}
-const anotherNum = ret();
-console.log(anotherNum);
-
-//function expression
-const logger = function() {
-    console.log("hello");
-};
-
-logger();
-
-//strelocinae functii
-
-const calc = (a, b) => a + b;
-
-const calc = (a, b) => {
-    console.log('1');
-    return a + b;
-};
+const str = "Test";
+const arr = [1, 2, 3];
+// console.log(arr.length);
+// console.log(str[2]);
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str);
 
 
 
+const fruit = "Some fruit";
+console.log(fruit.indexOf("fruit"));
+console.log(fruit.indexOf("q"));
 
-const udsCurr = 28;
 
-function convert (amount, curr) {
-    console.log(curr * amount);
-}
+const logg = "Hello world";
+console.log(logg.slice(6, 11));
+console.log(logg.slice(6));
+console.log(logg.slice(-5, -1));
+console.log(logg.substring(4, 11));
+console.log(logg.substr(6,5));
 
-convert(500, udsCurr);fu
+
+
+const num = 12.2;
+console.log(Math.round(num));
+
+const test = "12.2px";
+console.log(parseInt(test));
+console.log(parseFloat(test));
