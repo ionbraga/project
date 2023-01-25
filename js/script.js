@@ -49,3 +49,14 @@ const calc = (a, b) => {
     console.log('1');
     return a + b;
 };
+
+
+
+
+const udsCurr = 28;
+
+function convert (amount, curr) {
+    console.log(curr * amount);
+}
+
+convert(500, udsCurr);fu
