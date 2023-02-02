@@ -1,47 +1,34 @@
 "use strict";
 
+// let number = 5; debugger
 
-// Динамическая типизация
+// function logNumber() {
+//     let number = 4; debugger
+//     console.log(number);
+// }
 
-// 1) To string
-console.log(typeof(String(null)));
-console.log(typeof(String(4)));
+// number = 6;
 
-// Concatenare
-console.log(typeof(5 + ""));
-console.log(typeof(null + ""));
-
-const num = 5;
-console.log("https://vk.com/catalog/" + num);
-
-const fontSize = 26 + 'px';
-
-// 3) To number
+// logNumber(); debugger
 
 
-console.log(typeof(Number('4')));
-console.log(typeof(+'5'));
 
-console.log(typeof(parseInt("15px", 10)));
 
-let answer = +prompt("Hello", "");
+// function createCounter() {
+//     let counter = 0;
 
-// To boolean
+//     const myFunction = function() {
+//         counter = counter + 1;
+//         return counter;
+//     }
 
-// 0, '', null, undefined, NaN; - toate astea mereu vor fi false;
+//     return myFunction;
+// }
 
-let switcher = null;
-if (switcher) {
-    console.log("Working...")
-}
-switcher = 1;
+// const increment = createCounter();
+// const c1 = increment();
+// const c2 = increment();
+// const c3 = increment();
 
-if (switcher) {
-    console.log("Working...")
-};
+// console.log(c1, c2, c3);
 
-// 3.2
-console.log(typeof(Boolean('4')));
-
-// 3.3 
-console.log(typeof(!!"4444"));
